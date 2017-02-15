@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<!-- <html lang="zh-CN" manifest="manifest.appcache"> -->
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>survey</title>
+
+    <!-- Bootstrap -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="node_modules/html5shiv/dist/html5shiv.min.js"></script>
+      <script src="node_modules/respond.js/dest/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- my custom css -->
+    <link href="css/main.css" rel="stylesheet">
+
+  </head>
+  <body class="body-padding-2em">
+	<div class="container-fluid">
+		<!-- 标题部分 -->
+		<div class="row">
+			<div class="col-sm-12">
+				<h3 class="h3 text-center">黄石市中心医院门诊患者满意度调查表</h3>
+			</div>
+			<div class="col-sm-11">
+				<h4 class="h4 text-right">门诊:</h4>
+			</div>
+		</div>
+
+		<!-- 导言部分 -->
+		<div class="row">
+			<div class="col-sm-12">
+				<p class="text-left">
+					<strong>亲爱的先生/女士：</strong>
+				</p>
+			</div>
+			<div class="col-sm-12">
+				<p class=" text-left text-indent-2em">您好！本院为提高门急诊医疗服务质量，营造更好的医疗服务环境，恳请您利用几分钟时间填写这份问卷，以提供我们改进的方向。以下的问题，请您就本次就诊的经验作答，在合适的答案□内打V。为保障您的权益，本问卷将由专人处理，回答内容均予保密，敬请安心作答。完成问卷后请交给我们，谢谢您的合作与支持。  敬祝 健康快乐！</p>
+			</div>
+		</div>
+
+		<!-- 日期部分 -->
+		<div class="row">
+			<div class="col-sm-12">
+				<p class="text-right">
+					<span class="auto-year"></span>年<span class="auto-month"></span>月
+				</p>
+			</div>
+		</div>
+
+		<!-- 就医背景 -->
+		<div class="row">
+			<div class="col-sm-12">
+				<h5 class="h5 text-left">一、就医背景，请在适当的□内打V。</h5>
+			</div>
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">1、请问您是初次来本院住院？</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">①.是
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">②.否
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-8"></div>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">2、您为什么选择来本院看病？</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">①.亲友推荐
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">②.交通便利
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">③.不收红包
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">④.地点适中
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">⑤.医疗设备佳
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">⑥.医院名气
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">⑦.医术高明
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">⑧.服务态度好
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">⑨.转诊
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">⑩.其它
+						    </label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 满意程度 -->
+		<div class="row">
+			<div class="col-sm-12">
+				<h5 class="h5 text-left">二、您对医院医疗服务各项目的满意程度，请在适当的□内打V。满意程度：非常满意5分，满意4分，一般3分，不满意2分，很不满意1分</h5>
+			</div>
+
+			<!-- 1、您对医院的环境设施是否满意？ -->
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">
+							<strong>1、您对医院的环境设施是否满意？</strong>
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">①.医院的交通便利、停车方便</p>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">非常满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">一般
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">不满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">很不满意
+						    </label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">②.诊室是否安静、清洁、有序</p>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">非常满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">一般
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">不满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">很不满意
+						    </label>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 2、您对医院员工的服务态度是否满意？ -->
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">
+							<strong>2、您对医院员工的服务态度是否满意？</strong>
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">①.您对导医人员接待的满意度如何</p>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">非常满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">一般
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">不满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">很不满意
+						    </label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">②.您对挂号、收费处工作人员的服务态度是否满意</p>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">非常满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">一般
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">不满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">很不满意
+						    </label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">③.您对医生的服务态度是否满意</p>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">非常满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">一般
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">不满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">很不满意
+						    </label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">④.您对护士的服务态度是否满意</p>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">非常满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">一般
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">不满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">很不满意
+						    </label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">⑤.您对检验﹝查﹞部门工作人员的服务是否满意</p>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">非常满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">一般
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">不满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">很不满意
+						    </label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">⑥.您对药房工作人员的服务态度是否满意</p>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">非常满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">一般
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">不满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">很不满意
+						    </label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">⑦.您对保安及保洁人员的服务态度是否满意</p>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">非常满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">一般
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">不满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">很不满意
+						    </label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">⑧.医务人员是否有“吃拿卡要”现象</p>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">非常满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">一般
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">不满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">很不满意
+						    </label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">⑨.医务人员尊重我的隐私</p>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">非常满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">一般
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">不满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">很不满意
+						    </label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 3、您对医生的医疗质量满意 -->
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">
+							<strong>3、您对医生的医疗质量满意？</strong>
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">①.医生按时上岗，耐心倾听我的病情</p>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">非常满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">一般
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">不满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">很不满意
+						    </label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">②.医生仔细诊疗及详细说明病情、专业能力﹝医术﹞</p>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">非常满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">一般
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">不满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">很不满意
+						    </label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 4、您对护士的护理质量是否满意？（仅限于急诊就诊患者） -->
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">
+							<strong>4、您对护士的护理质量是否满意？（仅限于急诊就诊患者）</strong>
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">①.护理人员的技术水平 </p>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">非常满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">一般
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">不满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">很不满意
+						    </label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">②.护理人员是否主动为您介绍就医相关注意事项</p>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">非常满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">一般
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">不满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">很不满意
+						    </label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">③.护理人员经常巡视，观察病情、及时换药、拔针</p>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">非常满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">一般
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">不满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">很不满意
+						    </label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 5、服务结果 -->
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">
+							<strong>5、服务结果</strong>
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">①.当我抱怨时，立即得到适当的接待、处理 </p>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">非常满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">一般
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">不满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">很不满意
+						    </label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">②.窗口咨询是否有回复</p>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">非常满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">一般
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">不满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">很不满意
+						    </label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">③.您对本院门诊服务的整体感觉</p>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">非常满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">一般
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">不满意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">很不满意
+						    </label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 6、其他 -->
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">
+							<strong>6、其他</strong>
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">①.如果您再次有医疗需求的话，您会选择？</p>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">1.再来本院
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">2.到其他医院
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">3.不一定
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-12 margin-bottom-15px">
+						<div class="input-group">
+						  	<span class="input-group-addon" id="basic-addon1">4.其它(请说明)：</span>
+						  	<input type="text" class="form-control" placeholder="say something" aria-describedby="basic-addon1">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">②.当您有亲友需要医疗服务时，您愿意介绍他们来本院就医？</p>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">1.愿意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">2.不愿意
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">3.不一定
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-12 margin-bottom-15px">
+						<div class="input-group">
+						  	<span class="input-group-addon" id="basic-addon1">4.其它(请说明)：</span>
+						  	<input type="text" class="form-control" placeholder="say something" aria-describedby="basic-addon1" >
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">③.您认为本院门诊最需加强的部份是什么？</p>
+					</div>
+					<div class="col-sm-12">
+						<ol class="">
+							<li class="margin-bottom-15px">
+								<input type="text" class="width-percent-100 border-bottom-ddd" placeholder="say something" aria-describedby="basic-addon1">
+							</li>
+							<li class="margin-bottom-15px">
+								<input type="text" class="width-percent-100 border-bottom-ddd" placeholder="say something" aria-describedby="basic-addon1">
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<!-- 就医背景 -->
+		<div class="row">
+			<div class="col-sm-12">
+				<h5 class="h5 text-left">三、个人基本资料</h5>
+			</div>
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">1.填表人：</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">①.患者本人
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">②.亲友
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-8 margin-bottom-15px">
+						<div class="input-group">
+						  	<span class="input-group-addon" id="basic-addon1">4.其它(请说明)：</span>
+						  	<input type="text" class="form-control" placeholder="say something" aria-describedby="basic-addon1" >
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">2.患者性别：</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">①.男
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">②.女
+						    </label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">3.患者教育程度：</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">1.大专以上
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">2.高中
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">3.初中
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">4.小学
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">5.不识字
+						    </label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">4.患者居住地：</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">1.黄石城区
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">2.大冶
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">3.阳新
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">4.黄冈
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">5.鄂州
+						    </label>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="radio">
+						    <label>
+						      	<input type="radio">6.其它
+						    </label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-left">5.若您愿意我们进一步与您连系，请留下您的资料，我们将尽快依您的建议(意见)回复。</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<span>联系姓名：</span><input style="width: auto;" type="text">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<span>联系电话：</span>
+					</div>
+					<div class="col-sm-8">
+						<input type="text">
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		
+		
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Include my custom js -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
