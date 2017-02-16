@@ -110,7 +110,17 @@ $(function(){
 		return true;
 	}
 
+	function sendMsg() {
+		if(navigator.onLine){
+			localStorage.setItem("submittips", "已为您提交到服务器，感谢您的参与");
+			onlineCall('');
+		}else{
+			alert('目前你的网络无法连接，下次网络连接后会自动提交，谢谢参与');
+		}
+	}
+
 	function offlineCall(e) {
+		alert("Your network is not connected");
 		console.log('offline');
 		console.log(e);
 	}
@@ -131,9 +141,9 @@ $(function(){
 				success:function (data) {
 					if(submitTips){
 						localStorage.removeItem("submittips");
-						alert("已为您提交到服务器，感谢您的参与");
+						alert("已为您提交到服务器，感谢您的参与，共"+data+"条数据");
 					}else{
-						alert("上次未提交的问卷已为您提交到服务器，感谢您的参与");
+						alert("上次未提交的问卷已为您提交到服务器，感谢您的参与，共"+data+"条数据");
 					}
 					localStorage.removeItem("storearr");
 				},
@@ -154,17 +164,14 @@ $(function(){
 	}
 
 	setYearAndMonth(".auto-year", ".auto-month");
-
+	sendMsg();
+	
+	$(document).off("click", "#surveySubmit");
 	$(document).on("click", "#surveySubmit", function (e) {
 		var checkBool = checkRadio();
 		if(checkBool){
 			if(storeParams()){
-				if(navigator.onLine){
-					localStorage.setItem("submittips", "已为您提交到服务器，感谢您的参与");
-					onlineCall('');
-				}else{
-					offlineCall('');
-				}
+				sendMsg();
 			};
 		}
 		return false;

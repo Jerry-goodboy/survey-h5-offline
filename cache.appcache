@@ -1,11 +1,10 @@
 CACHE MANIFEST
-# 2017-02-12:v1
+# 2017-02-12:v2
 
 # Explicitly cached entries
 
 # Additional resources to cache
 CACHE:
-survey.html
 css/main.css
 js/main.js
 node_modules/bootstrap/dist/css/bootstrap.min.css
@@ -16,8 +15,9 @@ node_modules/bootstrap/dist/js/bootstrap.min.js
 
 # offline.html will be displayed if the user is offline
 FALLBACK:
-/ /offline.html
+survey.html offline.html
 
 # All other resources (e.g. sites) require the user to be online.
-NETWORK:
+# NETWORK:
 *
+
