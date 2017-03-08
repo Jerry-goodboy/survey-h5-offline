@@ -7,10 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "bootstrap": "bootstrap@3",
-    "jquery": "jquery@1.12",
-    "html5shiv": "html5shiv@latest",
-    "respond.js": "respond.js@latest"
+    "bootstrap": ">=3 <4",
+    "html5shiv": "^3.7.3",
+    "jquery": ">=1.12 <2",
+    "respond.js": "^1.4.2"
   },
   "repository": {
     "type": "git",
