@@ -1,0 +1,25 @@
+{
+  "name": "survey-h5-offline",
+  "version": "1.0.0",
+  "description": "survey for hospital using h5 application cache",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jerry-goodboy/survey-h5-offline.git"
+  },
+  "keywords": [
+    "manifest",
+    "h5",
+    "application",
+    "cache"
+  ],
+  "author": "liucaidong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jerry-goodboy/survey-h5-offline/issues"
+  },
+  "homepage": "https://github.com/Jerry-goodboy/survey-h5-offline#readme"
+}
