@@ -6,6 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "bootstrap": "bootstrap@3",
+    "jquery": "jquery@1.12",
+    "html5shiv": "html5shiv@latest",
+    "respond.js": "respond.js@latest"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jerry-goodboy/survey-h5-offline.git"
